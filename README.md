@@ -14,7 +14,7 @@ Search bots:
 ```lua
 diatgg.searchBots(search,limit)--limit is optional, default 50
 --Example
-diatgg.searchBots("HappleMan",45)
+diatgg.searchBots("HappleMan's Admin",45)
 --returns a table of bots
 ```
 
