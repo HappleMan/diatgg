@@ -66,4 +66,20 @@ diatgg.updateStats(client)
 --Does not return any value
 ```
 
+There is one more function, this one isn't official. Show additional bot stats found on the top.gg bot page but not in the api: 
+```lua
+diatgg.extraInfo(id)--Only works with your authenticated bot's Id. I have no Idea why.
+--Example
+diatgg.extraInfo(794759245408370729)
+--returns a table:
+{
+review_count = number of reviews,
+rating = number 0-5,
+announcement = {
+        title = announcement title,
+        body = announcement content
+    }
+ }
+```
+
 *All output is converted into tables. You can see the format of these responses at https://docs.top.gg/api/bot/ or https://docs.top.gg/api/user/
