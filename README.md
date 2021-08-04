@@ -5,7 +5,7 @@ You first need to input your top.gg authentication token and (optionally) your b
 
 ```lua
 local diatgg = require('diatgg')
-diattg.authenticate(token,id) --token can be fount at https://top.gg/bot/:bot_id/webhooks
+diattg.authenticate(token,id) --token can be fount at https://top.gg/bot/:bot_id/webhooks. It is recommended that you submit your id as a string, so it doesn't get simplified.
 ```
 
 ## Current available functions*:
