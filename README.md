@@ -63,7 +63,7 @@ Update a bot's stats:
 diatgg.updateStats(discordia client)
 --Example
 diatgg.updateStats(client)
---Does not return any value
+--returns an error if one exists, otherwise returns the string "{}"
 ```
 
 There is one more function, this one isn't official. Show additional bot stats found on the top.gg bot page but not in the api: 
