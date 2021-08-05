@@ -88,12 +88,13 @@ local payload = {
 server_count = #client.guilds,
 shard_count = client.totalShardCount
 }
-local res,body = http.request("GET","https://top.gg/api/bots/"..client.id.."/check",headers(),json.encode(payload)) 
+local res,body = http.request("POST","https://top.gg/api/bots/"..client.user.id.."/stats",headers(),json.encode(payload))
+return(body)
 end
 
 function diatgg.extraInfo(id)
 if id == nil or not id then id = Id end
-local res,body = http.request("GET","https://top.gg/bot/"..id)
+local res,body = http.request("GET","https://top.gg/bot/"..tostring(id))
 body = json.parse('{"props":'..string.split(string.gsub(body,"</script></body></html>",""),'{"props":')[2])
 local data = {
 review_count = body.props.pageProps.botData.reviewStats.reviewCount,
