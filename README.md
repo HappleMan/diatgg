@@ -66,7 +66,7 @@ diatgg.updateStats(client)
 --returns an error if one exists, otherwise returns the string "{}"
 ```
 
-There is one more function, this one isn't official. Show additional bot stats found on the top.gg bot page but not in the api: 
+(NO LONGER WORKS) There is one more function, this one isn't official. Show additional bot stats found on the top.gg bot page but not in the api: 
 ```lua
 diatgg.extraInfo(id)--id is optional if you submitted your bot's id during authentication
 --Example
@@ -81,5 +81,6 @@ announcement = {
     }
  }
 ```
+This function no longer works because top.gg has implemented DDoS protection. The function will remain in case of an update or workaround.
 
 *All output is converted into tables. You can see the format of these responses at https://docs.top.gg/api/bot/ or https://docs.top.gg/api/user/
