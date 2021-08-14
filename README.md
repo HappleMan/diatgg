@@ -47,7 +47,7 @@ Show a bot's stats:
 diatgg.botStats(id)--id is optional if you submitted your bot's id during authentication
 --Example
 diatgg.botStats("794759245408370729")
---returns a bot's stats, like shards, shard_count, and server_count
+--returns a bot's stats, like shards, shard_count, and server_count if available
 ```
 
 Check if a user has voted: 
