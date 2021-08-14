@@ -95,7 +95,11 @@ end
 function diatgg.extraInfo(id)
 if id == nil or not id then id = Id end
 local res,body = http.request("GET","https://top.gg/bot/"..tostring(id))
-body = json.parse('{"props":'..string.split(string.gsub(body,"</script></body></html>",""),'{"props":')[2])
+print("https://top.gg/bot/"..tostring(id))
+body = string.gsub(body,"</script></body></html>","")
+body = string.split(body,'{"props":')
+body = '{"props":'..body[2]
+body = json.parse(body)
 local data = {
 review_count = body.props.pageProps.botData.reviewStats.reviewCount,
 rating = body.props.pageProps.botData.reviewStats.averageScore/20,
