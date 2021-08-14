@@ -92,7 +92,7 @@ local res,body = http.request("POST","https://top.gg/api/bots/"..client.user.id.
 return(body)
 end
 
-function diatgg.extraInfo(id)
+function diatgg.extraInfo(id) local s,e = pcall(function()
 if id == nil or not id then id = Id end
 local res,body = http.request("GET","https://top.gg/bot/"..tostring(id))
 print("https://top.gg/bot/"..tostring(id))
@@ -109,6 +109,8 @@ announcement = {
     }
  }
 return(data)
+end) 
+if not s then print("diatgg has encountered an error in 'diatgg.extraInfo()'. This usually indicates that top.gg has implemented DDoS protection. Error: "e) return nil end
 end
 
 return diatgg
