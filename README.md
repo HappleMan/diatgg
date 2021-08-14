@@ -66,12 +66,13 @@ diatgg.updateStats(client)
 --returns an error if one exists, otherwise returns the string "{}"
 ```
 
-(NO LONGER WORKS) There is one more function, this one isn't official. Show additional bot stats found on the top.gg bot page but not in the api: 
+Show additional bot stats found on the top.gg bot page but not in the api: 
+(this one may or may not work depending on if top.gg has DDoS protection enabled.)
 ```lua
 diatgg.extraInfo(id)--id is optional if you submitted your bot's id during authentication
 --Example
 diatgg.extraInfo("794759245408370729")
---returns a table:
+--returns a table, or nil if the information is not available:
 {
 review_count = number of reviews,
 rating = number 0-5,
@@ -81,6 +82,5 @@ announcement = {
     }
  }
 ```
-This function no longer works because top.gg has implemented DDoS protection. The function will remain in case of an update or workaround.
 
 *All output is converted into tables. You can see the format of these responses at https://docs.top.gg/api/bot/ or https://docs.top.gg/api/user/
