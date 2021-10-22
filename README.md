@@ -1,3 +1,5 @@
+-Better function outputs coming soon
+
 ## diatgg
 
 Diatgg is a really simple top.gg api module for communicating with the top.gg api. 
