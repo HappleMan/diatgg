@@ -110,7 +110,7 @@ announcement = {
  }
 return(data)
 end) 
-if not s then print("diatgg has encountered an error in 'diatgg.extraInfo()'. This usually indicates that top.gg has implemented DDoS protection. Error: "e) return nil end
+if not s then print("diatgg has encountered an error in 'diatgg.extraInfo()'. This usually indicates that top.gg has implemented DDoS protection. Error: "..e) return nil end
 end
 
 return diatgg
